@@ -1,0 +1,76 @@
+﻿<Window x:Class="QuickDownloadManagerDesktop.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QuickDownloadManagerDesktop"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="720" Width="1280">
+	
+	<DockPanel Background="LightGray">
+		<Menu DockPanel.Dock="Top">
+			<MenuItem Header="Task"/>
+		</Menu>
+
+		<Grid>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="auto"/>
+				<RowDefinition Height="*"/>
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*"/>
+			</Grid.ColumnDefinitions>
+
+			<Border x:Name="Ribbon"
+					Grid.Row="0"
+					Grid.Column="0"
+					Height="50"
+					Background="LightGray">
+				<Grid>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="100"></ColumnDefinition>
+						<ColumnDefinition Width="100"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<Button x:Name="AddURL" 
+							Grid.Column="0"
+							BorderThickness="0"
+							Content="Add URL"
+							Background="LightGray"
+							Command="{Binding AddURL_Command}"/>
+					
+					<Button x:Name="ClearList" 
+							Grid.Column="1"
+							BorderThickness="0"
+							Content="Clear List"
+							Background="LightGray"
+							Command="{Binding ClearList_Command}"/>
+				</Grid>
+			</Border>
+
+
+			<DataGrid Grid.Row="1" 
+					  AutoGenerateColumns="False" 
+					  ItemsSource="{Binding DataGridSource, Mode=TwoWay}"
+					  Margin="0 0 0 9"
+					  FontSize="16">
+				<DataGrid.Columns>
+					
+					<DataGridTextColumn IsReadOnly="True" 
+										Header="File Name" 
+										Binding="{Binding FileName}"
+										Width="50"/>
+					
+					<DataGridTextColumn IsReadOnly="True"
+										Header="File Size" 
+										Binding="{Binding FileSize}"
+										Width="108"/>
+					
+					<DataGridTextColumn IsReadOnly="True" 
+										Header="Date Added" 
+										Width="208"
+										Binding="{Binding DateAdded}"/>
+				</DataGrid.Columns>
+			</DataGrid>
+		</Grid>
+	</DockPanel>
+</Window>

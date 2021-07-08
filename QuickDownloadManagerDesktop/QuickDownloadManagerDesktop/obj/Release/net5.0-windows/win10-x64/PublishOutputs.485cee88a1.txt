@@ -1,0 +1,5 @@
+C:\Users\Timothy Ganoza\Projects\QuickDownloadManager\Build\QDM\QuickDownloadManagerDesktop.exe
+C:\Users\Timothy Ganoza\Projects\QuickDownloadManager\Build\QDM\QuickDownloadManagerDesktop.dll
+C:\Users\Timothy Ganoza\Projects\QuickDownloadManager\Build\QDM\QuickDownloadManagerDesktop.deps.json
+C:\Users\Timothy Ganoza\Projects\QuickDownloadManager\Build\QDM\QuickDownloadManagerDesktop.runtimeconfig.json
+C:\Users\Timothy Ganoza\Projects\QuickDownloadManager\Build\QDM\QuickDownloadManagerDesktop.pdb
